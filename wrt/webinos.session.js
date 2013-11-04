@@ -45,9 +45,9 @@ if (typeof _webinos === "undefined") {
     function updateConnected(message){
         if (message.pzhId) pzhId = message.pzhId;
         if (message.connectedDevices) connectedDevices = message.connectedDevices;
-        isConnected = !!(webinos.session.getConnectedPzh().indexOf(pzhId) !== -1);
         if (message.enrolled) enrolled = message.enrolled;
-        if (message.mode) mode = message.mode;
+        if (message.state) mode = message.state;
+        if (mode)  isConnected = (mode["Pzh"] === "connected" || mode["Pzp"] === "connected");
         if (message.hasOwnProperty("pzhWebAddress")) {
             webinos.session.setPzhWebAddress(message.pzhWebAddress);
         } 
@@ -134,7 +134,7 @@ if (typeof _webinos === "undefined") {
        var list =[];
        if(pzhId) {
          for (var i = 0 ; i < connectedDevices.length; i = i + 1){
-           list.push(connectedDevices[i].id);
+             list.push(connectedDevices[i].id);
          }
        }
        return list;
@@ -144,10 +144,10 @@ if (typeof _webinos === "undefined") {
         if (connectedDevices){
            for (var i = 0 ; i < connectedDevices.length; i = i + 1){
             if(!pzhId) {
-              list.push(connectedDevices[i]);
+                  list.push(connectedDevices[i]);
             } else {
               for (var j = 0; j < (connectedDevices[i].pzp && connectedDevices[i].pzp.length); j = j + 1){
-               list.push(connectedDevices[i].pzp[j]);
+                  list.push(connectedDevices[i].pzp[j]);
               }
            }
           }
