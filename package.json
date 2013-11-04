@@ -7,7 +7,7 @@
   "bugs": "http://jira.webinos.org",
   "repository":
    { "type": "git",
-     "url": "git://github.com/webinos/webinos-pzp.git"
+     "url": "git://github.com/heiiko/webinos-pzp.git"
    },
   "directories": {
     "lib": "./lib",
@@ -16,11 +16,14 @@
   },
   "bundleDependencies":["webinos-api-test"],
   "dependencies":{
-    "webinos-certificateHandler": "git://github.com/webinos/webinos-certificateHandler.git",
-    "webinos-utilities"         : "git://github.com/webinos/webinos-utilities.git",
-    "webinos-policy"            : "git://github.com/webinos/webinos-policy.git",
-    "webinos-dashboard"         : "git://github.com/webinos/webinos-dashboard.git",
-    "webinos-api-applauncher"   : "git://github.com/webinos/webinos-api-applauncher.git",
+    "webinos-certificateHandler": "git://github.com/heiiko/webinos-certificateHandler.git",
+    "webinos-utilities"         : "git://github.com/heiiko/webinos-utilities.git",
+    "webinos-policy"            : "git://github.com/heiiko/webinos-policy.git",
+    "webinos-dashboard"         : "git://github.com/heiiko/webinos-dashboard.git",
+    "webinos-api-applauncher"   : "git://github.com/heiiko/webinos-api-applauncher.git",
+    "webinos-api-mediacontent"  : "git://github.com/heiiko/webinos-api-mediaContent.git",
+    "webinos-api-deviceStatus"  : "git://github.com/heiiko/webinos-api-deviceStatus.git",
+    "webinos-api-app2app"       : "git://github.com/heiiko/webinos-api-app2app.git",
     "webinos-jsonrpc2"          : "*",
     "websocket"                 : "1.0.2",
     "optimist"                  : "x.x.x"
